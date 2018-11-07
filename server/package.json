@@ -1,0 +1,31 @@
+{
+  "name": "trendy",
+  "version": "1.0.0",
+  "description": "Photo Votes",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gopun/trendy.git"
+  },
+  "author": "Gopu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gopun/trendy/issues"
+  },
+  "homepage": "https://github.com/gopun/trendy#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.4",
+    "express-generator": "^4.16.0",
+    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.3.6",
+    "path": "^0.12.7"
+  }
+}

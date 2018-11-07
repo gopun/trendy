@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon name="arrow-round-back" class="back_arrow" style="zoom:2;" (click)="closeModal()"></ion-icon>
+    <ion-title class="comment_head" text-center>Comments</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding #Content>
+  <ion-item>
+    <div class="cmtTitle">
+      {{ cmtItem.title }}
+    </div>
+  </ion-item>
+  <ion-list *ngFor="let comment of comments">
+    <ion-avatar item-start>
+      <img class="user_image" [src]=comment.userimage>
+    </ion-avatar>
+    <div class="cmtContainer">
+      <p class="username">{{comment.username}}</p>
+      <p class="comment">{{comment.comment}}</p>
+      <p class="time-right">{{comment.createdAt | amTimeAgo}}</p>
+    </div>
+  </ion-list>
+</ion-content>
+
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-10>
+        <ion-input type="text" placeholder="Type a message" name="message"></ion-input>
+      </ion-col>
+      <ion-col col-2 (click)="sendMessage()">
+        <ion-icon name="paper-plane"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

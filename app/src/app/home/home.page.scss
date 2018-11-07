@@ -1,0 +1,148 @@
+.card-background-page {
+  ion-card {
+    position: relative;
+    text-align: center;
+  }
+
+  .left_img {
+    width: 50%;
+    float: left;
+  }
+
+  .right_img {
+    width: 50%;
+    float: right;
+  }
+
+  .total_votes {
+    color: black;
+  }
+
+  .cmtText {
+    font-size: 13px;
+    position: absolute;
+    text-align: center;
+    width: 26px;
+    padding-top: 0;
+  }
+
+  .verticalLine {
+    border-left: thick solid #ff0000;
+    border: solid #827E7E;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 20px;
+    width: 20%;
+    text-align: center;
+    margin: auto;
+  }
+
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0 -10px 26vh;
+    padding: 0;
+  }
+
+  .header_count {
+    width: 100%;
+    margin: auto;
+    display: -webkit-flex;
+    text-align: center;
+  }
+
+  .bottom_row {
+    margin-top: 90%;
+  }
+
+  .username {
+    padding-left: 1vh;
+  }
+
+  .left_img_div {
+    position: relative;
+  }
+
+  .circle1,
+  .circle2,
+  .secondcircle1,
+  .secondcircle2 {
+    border-radius: 50%;
+  }
+
+  .circle1 {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    // margin-top: -100px;
+    margin-left: -1.35em;
+  }
+
+  .secondcircle1 {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    // margin-top: -100px;
+    margin-left: -1.35em;
+  }
+
+  .circle2,
+  .secondcircle2 {
+    transform: translate(35%, 35%);
+    width: 23px;
+    height: 23px;
+    background-color: white;
+  }
+
+  .checkmark {
+    font-family: arial;
+    left: 33%;
+    position: absolute;
+    top: 10%;
+    transform: scaleX(-1) rotate(-39deg);
+  }
+
+  .firstOverlayLine {
+    position: absolute;
+    bottom: 0;
+    margin-left: -25%;
+    margin-bottom: -89%;
+    width: 1%;
+    transition: height 0.2s ease-in-out;
+  }
+
+  .secondOverlayLine {
+    position: absolute;
+    bottom: 0;
+    margin-left: 0;
+    margin-bottom: 18%;
+    width: 1%;
+    height: 20px;
+    transition: height 0.2s ease-in-out;
+  }
+
+  .lowActiveCircle {
+    background-color: rgba(178, 190, 180, 0.5);
+  }
+
+  .lowActiveCheckmark {
+    color: rgba(178, 190, 180, 0.5);
+  }
+
+  .lowActiveLine {
+    background: #bdbdbd;
+  }
+
+  .highActiveCircle {
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+
+  .highActiveCheckmark {
+    color: rgba(255, 0, 0, 0.5);
+  }
+
+  .highActiveLine {
+    background: #ff6161;
+  }
+}

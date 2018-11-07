@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon name="arrow-round-back" class="back_arrow" style="zoom:2;" (click)="closeModal()"></ion-icon>
+    <ion-avatar item-start class="user_img_container">
+      <img class="user_image" [src]=user.userimage>
+    </ion-avatar>
+    <ion-title class="chat_head" text-center>{{user.username}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding #chatContent>
+  <ion-list *ngFor="let chat of chats">
+    <div class="chat-message" text-right *ngIf="chat.userid == 1">
+      <div class="right-bubble">
+        <!-- <span class="msg-name">{{chat.username}}</span> -->
+        <span class="msg-date">{{chat.createdAt | date:'hh:mm a'}}</span>
+        <p class="chat_message" text-wrap>{{chat.comment}}</p>
+      </div>
+    </div>
+    <div class="chat-message" text-left *ngIf="chat.userid == 2">
+      <div class="left-bubble">
+        <!-- <span class="msg-name">{{chat.username}}</span> -->
+        <span class="msg-date">{{chat.createdAt | date:'hh:mm a'}}</span>
+        <p class="chat_message" text-wrap>{{chat.comment}}</p>
+      </div>
+    </div>
+  </ion-list>
+</ion-content>
+
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-10>
+        <ion-input type="text" placeholder="Type a message" name="message"></ion-input>
+      </ion-col>
+      <ion-col col-2 (click)="sendMessage()">
+        <ion-icon name="paper-plane"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

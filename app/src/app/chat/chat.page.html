@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="chat_head" text-center>Chats</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngFor="let comment of chats">
+    <div class="cmtContainer">
+      <ion-avatar item-start class="user_img_container">
+        <img class="user_image" [src]=comment.userimage>
+      </ion-avatar>
+      <p class="username" (click)="openChatModel(comment)">{{comment.username}}</p>
+      <p class="comment" (click)="openChatModel(comment)">{{comment.comment}}</p>
+      <p class="time-right" (click)="openChatModel(comment)">{{parseDate(comment.createdAt)}}</p>
+    </div>
+  </ion-list>
+</ion-content>

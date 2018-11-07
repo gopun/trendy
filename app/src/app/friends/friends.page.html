@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="vote_head" text-center>Friends</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <div class="voteTitle">
+      users
+    </div>
+  </ion-item>
+  <ion-list>
+    <ion-item class="votes_users" *ngFor="let users of voteUsers">
+      <ion-avatar item-start class="left-col">
+        <img class="user_image" [src]=users.userimage>
+      </ion-avatar>
+      <p class="username center-col">{{users.username}}</p>
+      <p class="followUser follow right-col" *ngIf="users.followStatus == 0">
+      <!-- <p class="followUser right-col"> -->
+        <ion-icon name="add"></ion-icon>Follow
+      </p>
+      <p class="followUser right-col" *ngIf="users.followStatus == 1">
+        <!-- <p class="followUser right-col"> -->
+        <ion-icon name="checkmark"></ion-icon>Following
+      </p>
+      <p class="chatUser" (click)="openChatModel(users)">Message
+      </p>
+    </ion-item>
+  </ion-list>
+</ion-content>

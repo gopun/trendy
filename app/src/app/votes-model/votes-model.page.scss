@@ -1,0 +1,63 @@
+.vote_head {
+  width: 50%;
+  margin: auto;
+  display: -webkit-flex;
+  text-align: center;
+  margin-top: -30px;
+}
+
+.back_arrow {
+  width: 7%;
+  margin-bottom: 1%;
+}
+
+.voteTitle {
+  width: 100%;
+  text-align: center;
+}
+
+.user_image {
+  width: 30px;
+  height: 30px;
+}
+
+.followUser {
+  border: 1px solid #92a8f3;
+  border-radius: 5px;
+  background-color: #92a8f3;
+  color: white;
+}
+
+.votes_users {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.left-col {
+  float: left;
+  // width: 25%;
+}
+
+.center-col {
+  display: inline-block;
+  margin-top: -10px;
+  margin-left: -5%;
+  width: 100px;
+}
+
+.right-col {
+  float: right;
+  width: auto;
+  margin-left: 25%;
+  margin-top: -10px;
+  padding-right: 2%;
+  padding-top: 2px;
+
+  ion-icon {
+    padding-right: 5px;
+    padding-left: 1px;
+    margin-bottom: -2px;
+  }
+}

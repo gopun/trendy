@@ -1,0 +1,144 @@
+.chat_head {
+  width: 50%;
+  margin: auto;
+  display: -webkit-flex;
+  margin-top: 37px;
+}
+
+.back_arrow {
+  width: 7%;
+  margin-bottom: 1%;
+}
+
+.user_img_container {
+  margin-bottom: -27%;
+  margin-left: 8%;
+  margin-top: -11%;
+}
+
+.user_image {
+  width: 30px;
+  height: 30px;
+}
+
+.comment {
+  margin-bottom: -5%;
+}
+
+.username {
+  // margin-bottom: -9%;
+  color: var(--ion-color-primary, #3880ff);
+}
+
+.leftCmtContainer {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding-top: 1px;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-top: -23%;
+  margin-left: 11%;
+  padding-bottom: 40px;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+ion-footer {
+  background: white;
+
+  ion-icon {
+    padding: 10px;
+    font-size: 20px;
+    color: green;
+    float: right;
+  }
+}
+
+.chat-message {
+  width: 80%;
+  min-height: 40px;
+  position: relative;
+
+  .chat_message {
+    text-align: left;
+  }
+
+  .right-bubble {
+    position: relative;
+    background: #dcf8c6;
+    border-top-left-radius: 0.4em;
+    border-bottom-left-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+    padding: 5px 10px 10px;
+    left: 15%;
+
+    span.msg-name {
+      font-size: 12px;
+      font-weight: bold;
+      color: green;
+    }
+
+    span.msg-date {
+      font-size: 10px;
+      position: absolute;
+      bottom: 0;
+      right: 15px;
+    }
+  }
+
+  .right-bubble:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 27px solid transparent;
+    border-left-color: #dcf8c6;
+    border-right: 0;
+    border-top: 0;
+    margin-top: -13.5px;
+    margin-right: -27px;
+  }
+
+  .left-bubble {
+    position: relative;
+    background: #dcf8c6;
+    border-top-right-radius: 0.4em;
+    border-bottom-left-radius: 0.4em;
+    border-bottom-right-radius: 0.4em;
+    padding: 5px 10px 10px;
+    left: 5%;
+
+    span.msg-name {
+      font-size: 12px;
+      font-weight: bold;
+      color: blue;
+    }
+
+    span.msg-date {
+      font-size: 10px;
+      position: absolute;
+      bottom: 0;
+      right: 15px;
+    }
+  }
+
+  .left-bubble:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 27px solid transparent;
+    border-right-color: #dcf8c6;
+    border-left: 0;
+    border-top: 0;
+    margin-top: -13.5px;
+    margin-left: -27px;
+  }
+}

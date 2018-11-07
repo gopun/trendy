@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title text-center>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #Trendycontents padding class="card-background-page">
+
+  <ion-list>
+    <ion-card [id]="'Trendycontents'+i" *ngFor="let item of items; let i = index">
+      <div class="header_count">
+        <p class="verticalLine">
+          {{i+1}} of {{items.length}}
+        </p>
+      </div>
+      <ion-item>
+        <ion-avatar item-start>
+          <img class="user_image" src="assets/icon/user-profile.jpg">
+        </ion-avatar>
+        <p class="username">Marty McFly</p>
+      </ion-item>
+
+      <ion-card-header>
+        <p>
+          {{item.title}}
+        </p>
+      </ion-card-header>
+
+      <div class="left_img_div" (click)="!item.imgvoted ? addPercent('1',item, (i+1)) : false">
+        <span class="firstOverlayLine" [ngClass]="(item.img1LowActive)?'lowActiveLine':'highActiveLine'" [ngStyle]="{'height':(item.img1lineHeight+'px')}" *ngIf="item.imgvoted">
+          <div class="circle1" [ngClass]="(item.img1LowActive)?'lowActiveCircle':'highActiveCircle'" [ngStyle]="{'margin-top':(item.circleTop+'px')}" *ngIf="item.img1voted">
+            <div class="circle2">
+              <div class="checkmark" [ngClass]="(item.img1LowActive)?'lowActiveCheckmark':'highActiveCheckmark'">L</div>
+            </div>
+          </div>
+        </span>
+        <img class="left_img" [src]=item.image1 />
+      </div>
+
+      <div class="right_img_div" (click)="!item.imgvoted ? addPercent('2',item, (i+1)) : false">
+        <span class="secondOverlayLine" [ngClass]="(item.img2LowActive)?'lowActiveLine':'highActiveLine'" [ngStyle]="{'height':(item.img2lineHeight+'px')}" *ngIf="item.imgvoted">
+          <div class="secondcircle1" [ngClass]="(item.img2LowActive)?'lowActiveCircle':'highActiveCircle'" [ngStyle]="{'margin-top':(item.circleTop+'px')}" *ngIf="item.img2voted">
+            <div class="secondcircle2">
+              <div class="checkmark" [ngClass]="(item.img2LowActive)?'lowActiveCheckmark':'highActiveCheckmark'">L</div>
+            </div>
+          </div>
+        </span>
+        <img class="right_img" [src]=item.image2 />
+
+      </div>
+
+      <ion-row class="bottom_row">
+        <ion-col center text-center>
+          <ion-note [hidden]=!item.img1percent>
+            {{item.img1percent}}%
+          </ion-note>
+        </ion-col>
+        <ion-col center text-center>
+          <ion-note [hidden]=!item.img2percent>
+            {{item.img2percent}}%
+          </ion-note>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="comment_bottom_row">
+        <ion-col (click)="votesModel(item)">
+          <ion-note class="total_votes">
+            {{item.totalvotes}} votes
+          </ion-note>
+        </ion-col>
+        <ion-col (click)="commentModel(item)">
+          <ion-icon name="text"></ion-icon>
+          <span class="cmtText">{{item.comments}}</span>
+        </ion-col>
+        <ion-col (click)="shareModel(item)">
+          <ion-icon name="share"></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

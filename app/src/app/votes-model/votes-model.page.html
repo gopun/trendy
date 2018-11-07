@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon name="arrow-round-back" class="back_arrow" style="zoom:2;" (click)="closeModal()"></ion-icon>
+    <ion-title class="vote_head" text-center>Votes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <div class="voteTitle">
+      {{ cmtItem.totalvotes }} users
+    </div>
+  </ion-item>
+  <ion-list>
+    <ion-list class="votes_users" *ngFor="let users of voteUsers">
+      <ion-avatar item-start class="left-col">
+        <img class="user_image" [src]=users.userimage>
+      </ion-avatar>
+      <p class="username center-col">{{users.username}}</p>
+      <!-- <p class="followUser right-col" *ngIf="users.followStatus == 0"> -->
+      <p class="followUser right-col">
+        <ion-icon name="add"></ion-icon>Follow
+      </p>
+      <p class="followUser right-col" *ngIf="users.followStatus == 1">
+      <!-- <p class="followUser right-col"> -->
+        <ion-icon name="checkmark"></ion-icon>Following
+      </p>
+    </ion-list>
+  </ion-list>
+</ion-content>
